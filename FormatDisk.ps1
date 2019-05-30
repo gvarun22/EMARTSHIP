@@ -3,6 +3,6 @@ Get-Disk | Where-Object PartitionStyle -eq "RAW" | Initialize-Disk -PartitionSty
 New-LocalGroup DataDiskUsers
 New-Item -ItemType directory -Path D:\source
 $acl = Get-Acl D:source
-$rule = New-Object System.Security.AccessControl.FileSystemAccessRule("ServiceFabricAllowedUsers","FullControl", "ContainerInherit, ObjectInherit", "None", "Allow")
+$rule = New-Object System.Security.AccessControl.FileSystemAccessRule("DataDiskUsers","FullControl", "ContainerInherit, ObjectInherit", "None", "Allow")
 $acl.AddAccessRule($rule)
 Set-Acl D:source $acl
