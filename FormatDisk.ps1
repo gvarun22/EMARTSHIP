@@ -124,7 +124,7 @@ $WorkingDirectory = "D:source"
 Write-Host "Create working directory and "
 CreateWorkingDirectoryAndSetPermissions -LocalUserGroup $LocalUserGroup -WorkingDirectory $WorkingDirectory
 
-$KeyVaultName = "amsdevg0keymedia11"
+$KeyVaultName = "amsdevsfcluster"
 $CertName = "amsdevsfcluster"
 
 Write-Host "Get key vault Auth token"
